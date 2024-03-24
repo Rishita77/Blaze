@@ -15,7 +15,8 @@
         <span id="logo">
           <box-icon type='solid' name='landscape'></box-icon>
           <div class="flex-container">
-            <img src="./Assets/Blaze-no-bg.png" id="logo-login"><p> BLAZE </p>
+            <img src="./Assets/Blaze-no-bg.png" id="logo-login">
+            <p> BLAZE </p>
           </div>
         </span>
         <h2>Create account</h2>
@@ -42,6 +43,41 @@
       </div>
     </div>
   </div>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Get user input
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      // Send a POST request to the server to log in the user
+      try {
+        const response = await fetch('/users/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email, password }),
+        });
+
+        if (response.ok) {
+          // Parse the token from the response
+          const token = await response.text();
+          // Store the token in the browser's local storage
+          localStorage.setItem('token', token);
+          // Redirect the user to a protected page
+          window.location.href = '/protected';
+        } else {
+          throw new Error('Invalid email or password.');
+        }
+      } catch (error) {
+        console.error(error);
+        alert('Invalid email or password.');
+      }
+    });
+  </script>
 </body>
 
 </html>

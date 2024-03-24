@@ -125,7 +125,7 @@ ul.login-icons li {
 
 @media screen and (min-width: 400px) {
     body {
-        margin: 20px;
+        margin: 30px;
     }
 
     .login-container {
@@ -154,4 +154,15 @@ ul.login-icons li {
         height: 90%;
         top: 20px;
     }
+}
+
+/* #logo-login {
+    margin-top: 15px;
+} */
+
+#grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }

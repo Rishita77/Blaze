@@ -160,9 +160,20 @@ ul.login-icons li {
     margin-top: 15px;
 } */
 
-#grid-container {
+.flex-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+}
+
+.flex-container>img {
+    height: 45px;
+}
+
+.flex-container>p {
+    margin: 0;
+    margin-top: 10px;
+    padding-left: 6px;
+    font-size: 12pt;
 }

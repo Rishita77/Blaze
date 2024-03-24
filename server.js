@@ -9,10 +9,6 @@ const app = express();
 const userRouter = require('./routes/user');
 const loginRouter = require('./routes/login');
 
-
-
-
-
 // Connect to MongoDB
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,

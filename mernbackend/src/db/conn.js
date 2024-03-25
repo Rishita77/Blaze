@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require("mongoose")
 
 mongoose.connect("mongodb://localhost:27017/Blaze", {
     useNewUrlParser:true,
@@ -6,6 +6,6 @@ mongoose.connect("mongodb://localhost:27017/Blaze", {
     useCreateIndex:true
 }).then(() => {
     console.log(`connection successful`);
-}).catch((e) => {
+}).catch((e) =>{
     console.log(`no connection`);
 })

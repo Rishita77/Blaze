@@ -85,16 +85,6 @@ main {
     margin: 3rem auto;
 }
 
-footer {
-    width: 100vw;
-    margin: 0 auto;
-    padding: 1.5rem 0;
-    font-size: .875rem;
-    text-align: center;
-    color: #234;
-    background: white;
-}
-
 @media (min-width: 768px) {
     .banner2>header {
         max-width: 50%;

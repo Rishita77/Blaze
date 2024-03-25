@@ -1,6 +1,8 @@
 body {
     overflow-x: hidden;
+    background-image: url(../Assets/Societies/societies-bg.png);
 }
+
 
 .cards-list {
     z-index: 0;

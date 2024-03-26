@@ -5,6 +5,11 @@
     /* width: 50px; */
 }
 
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .timeline-container-desktop {
     justify-content: center;
     align-items: center;
@@ -80,6 +85,18 @@ button:hover {
     .timeline-container-mobile {
         visibility: visible;
         display: contents;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .h3-width{
+        width: auto;
+    }
+
+    .hide-div {
+        display: none;
     }
 
     .event-name,
@@ -98,5 +115,14 @@ button:hover {
         min-width: 150px;
         height: 100px;
         background-color: transparent;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 }

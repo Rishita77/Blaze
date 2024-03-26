@@ -1,0 +1,144 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    margin: 0;
+    color: white;
+    background-color: #234;
+}
+
+section header {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+section header h2 {
+    font-size: 1.5rem;
+}
+
+section>* {
+    width: 90vw;
+}
+
+.banner1,
+.banner2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 90vw;
+    min-height: 90vh;
+    gap: 5%;
+    padding: 5vh 5vw;
+    background: #767676;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) 50%/50%;
+}
+
+.banner1 {
+    background-image: url(https://images.unsplash.com/photo-1543158266-0066955047b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80);
+}
+
+.banner2 {
+    background-image: url(https://images.unsplash.com/photo-1543154226-4493b6edc693?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80);
+}
+
+/* Fix for iOS Safari */
+@supports (-webkit-overflow-scrolling: touch) {
+
+    .banner1,
+    .banner2 {
+        background-attachment: scroll;
+    }
+}
+
+.banner2 img {
+    max-width: calc(90vw - 10px);
+    height: auto;
+    border: 5px solid white;
+}
+
+.banner-text {
+    min-width: 90vw;
+    margin: 0 auto;
+    font-size: 1rem;
+    font-weight: 300;
+    overflow: auto;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 10vh;
+    font-size: 1.25rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+main {
+    width: 90vw;
+    max-width: 60ch;
+    margin: 3rem auto;
+}
+
+@media (min-width: 768px) {
+    .banner2>header {
+        max-width: 50%;
+    }
+
+    section header h2 {
+        font-size: inherit;
+    }
+
+    .banner1,
+    .banner2 {
+        width: 80vw;
+        padding: 0 10vw;
+    }
+
+    .banner-text {
+        max-width: 100%;
+        min-width: 50%;
+        font-size: 1rem;
+    }
+
+    .banner2 img {
+        max-width: calc(45% - 10px);
+    }
+
+    .brand {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    .banner1,
+    .banner2 {
+        width: 60vw;
+        padding: 0 20vw;
+    }
+
+    .banner-text {
+        font-size: 1.25rem;
+    }
+
+    .brand {
+        font-size: 2.5rem;
+    }
+}
+
+#sign-up-btn {
+    height: 40px;
+    font-size: 15px;
+    width: 125px;
+}
+
+#sign-up-btn>p{
+    margin: 0;
+    margin-top: -2px;
+}

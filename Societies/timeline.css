@@ -5,7 +5,7 @@
     /* width: 50px; */
 }
 
-.timeline-container {
+.timeline-container-desktop {
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -14,6 +14,11 @@
     height: 200px;
     flex-direction: row;
     align-self: center;
+}
+
+.timeline-container-mobile{
+    visibility: hidden;
+    display: none;
 }
 
 .timeline-card {
@@ -67,6 +72,16 @@ button:hover {
 /* media query for <870px */
 @media screen and (max-width: 870px) {
 
+    .timeline-container-desktop {
+        visibility: hidden;
+        display: none;
+    }
+
+    .timeline-container-mobile {
+        visibility: visible;
+        display: contents;
+    }
+
     .event-name,
     h4 {
         visibility: hidden;
@@ -82,5 +97,6 @@ button:hover {
         max-width: 150px;
         min-width: 150px;
         height: 100px;
+        background-color: transparent;
     }
 }

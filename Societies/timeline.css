@@ -75,7 +75,7 @@ button:hover {
 }
 
 /* media query for <870px */
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 925px) {
 
     .timeline-container-desktop {
         visibility: hidden;
@@ -111,8 +111,8 @@ button:hover {
     }
 
     .timeline-card {
-        max-width: 150px;
-        min-width: 150px;
+        max-width: 30vw;
+        /* min-width: 30vw; */
         height: 100px;
         background-color: transparent;
         margin-top: 10px;

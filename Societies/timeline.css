@@ -1,4 +1,65 @@
-.timeline-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+/* @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;700&display=swap'); */
+
+.time-line {
+    height: 200px;
+    /* width: 50px; */
 }
+
+.timeline-container {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+    flex-direction: row;
+    align-self: center;
+}
+.timeline-card {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 175px;
+    height: 175px;
+    margin: 0px 10px 0px 10px;
+    background-color: white;
+}
+
+.hide-div {
+    visibility: hidden;
+}
+
+.card-img {
+    max-width: 100%;
+    border-bottom: 4px solid rgb(255, 0, 0);
+}
+
+.h3-width {
+    width: 75px;
+}
+
+h4 {
+    /* padding-left: 20px; */
+    /* padding-right: 20px; */
+    font-size: 12px;
+}
+
+
+button {
+    /* margin: 20px; */
+    /* padding: 10px 20px; */
+    background-color: transparent;
+    color: #ff0000;
+    border-radius: 50px;
+    border: 2px solid rgb(255, 3, 3);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #ff0000;
+    color: white;
+}
+
+/* media query for <870px */

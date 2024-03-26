@@ -75,7 +75,7 @@ button:hover {
 }
 
 /* media query for <870px */
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 850px) {
 
     .timeline-container-desktop {
         visibility: hidden;

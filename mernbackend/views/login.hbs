@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy6qA5pxZlO8JiZM2k1C5VXbDIvaLkFNnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
+    <title>Login Form</title>
+</head>
+
+<style>
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    body {
+        font-family: "Montserrat", sans-serif;
+        font-size: 12px;
+        line-height: 1em;
+    }
+
+    button {
+        background-color: transparent;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+    }
+
+    input {
+        background-color: transparent;
+        padding: 0;
+        border: 0;
+        outline: 0;
+    }
+
+    input[type="submit"] {
+        cursor: pointer;
+    }
+
+    input::-webkit-input-placeholder,
+    input::-moz-placeholder,
+    input:-ms-input-placeholder,
+    input::-ms-input-placeholder,
+    input::placeholder {
+        font-size: 0.85rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 300;
+        letter-spacing: 0.1rem;
+        color: #ccc;
+    }
+
+    .user {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background: url("https://image.freepik.com/free-photo/green-leaf-forest_1150-12333.jpg") no-repeat center;
+        background-size: cover;
+    }
+
+    .user_options-container {
+        position: relative;
+        width: 80%;
+    }
+
+    .user_options-text {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        width: 100%;
+        background-color: rgba(34, 34, 34, 0.85);
+        border-radius: 3px;
+    }
+
+    .user_options-registered,
+    .user_options-unregistered {
+        width: 50%;
+        padding: 75px 45px;
+        color: #fff;
+        font-weight: 300;
+    }
+
+    .user_registered-title,
+    .user_unregistered-title {
+        margin-bottom: 15px;
+        font-size: 1.66rem;
+        line-height: 1em;
+    }
+
+    .user_unregistered-text,
+    .user_registered-text {
+        font-size: 0.83rem;
+        line-height: 1.4em;
+    }
+
+    .user_registered-login,
+    .user_unregistered-signup {
+        margin-top: 30px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        padding: 10px 30px;
+        color: #fff;
+        text-transform: uppercase;
+        line-height: 1em;
+        letter-spacing: 0.2rem;
+        -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    }
+
+    .user_registered-login:hover,
+    .user_unregistered-signup:hover {
+        color: rgba(34, 34, 34, 0.85);
+        background-color: #ccc;
+    }
+
+    .user_options-forms {
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        width: calc(50% - 30px);
+        min-height: 420px;
+        background-color: #fff;
+        border-radius: 3px;
+        box-shadow: 2px 0 15px rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+        -webkit-transform: translate3d(100%, -50%, 0);
+        transform: translate3d(100%, -50%, 0);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out;
+        transition: -webkit-transform 0.4s ease-in-out;
+        transition: transform 0.4s ease-in-out;
+        transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+    }
+
+    .user_options-forms .user_forms-login {
+        -webkit-transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+        transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+    }
+
+    .user_options-forms .forms_title {
+        margin-bottom: 45px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1em;
+        text-transform: uppercase;
+        color: #e8716d;
+        letter-spacing: 0.1rem;
+    }
+
+    .user_options-forms .forms_field:not(:last-of-type) {
+        margin-bottom: 20px;
+    }
+
+    .user_options-forms .forms_field-input {
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        padding: 6px 20px 6px 6px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1rem;
+        font-weight: 300;
+        color: gray;
+        letter-spacing: 0.1rem;
+        -webkit-transition: border-color 0.2s ease-in-out;
+        transition: border-color 0.2s ease-in-out;
+    }
+
+    .user_options-forms .forms_field-input:focus {
+        border-color: gray;
+    }
+
+    .user_options-forms .forms_buttons {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        align-items: center;
+        margin-top: 35px;
+    }
+
+    .user_options-forms .forms_buttons-forgot {
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: 0.1rem;
+        color: #ccc;
+        text-decoration: underline;
+        -webkit-transition: color 0.2s ease-in-out;
+        transition: color 0.2s ease-in-out;
+    }
+
+    .user_options-forms .forms_buttons-forgot:hover {
+        color: #b3b3b3;
+    }
+
+    .user_options-forms .forms_buttons-action {
+        background-color: #e8716d;
+        border-radius: 3px;
+        padding: 10px 35px;
+        font-size: 1rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 300;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        -webkit-transition: background-color 0.2s ease-in-out;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    .user_options-forms .forms_buttons-action:hover {
+        background-color: #e14641;
+    }
+
+    .user_options-forms .user_forms-signup,
+    .user_options-forms .user_forms-login {
+        position: absolute;
+        top: 70px;
+        left: 40px;
+        width: calc(100% - 80px);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    .user_options-forms .user_forms-signup {
+        transform: translate3d(120px, 0, 0);
+    }
+
+    .user_options-forms .user_forms-signup .forms_buttons {
+        justify-content: flex-end;
+    }
+
+    .user_options-forms .user_forms-login {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .user_options-forms.bounceLeft {
+        animation: bounceLeft 1s forwards;
+    }
+
+    .user_options-forms.bounceLeft .user_forms-signup {
+        animation: showSignUp 1s forwards;
+    }
+
+    .user_options-forms.bounceLeft .user_forms-login {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate3d(-120px, 0, 0);
+    }
+
+    .user_options-forms.bounceRight {
+        animation: bounceRight 1s forwards;
+    }
+
+    @media screen and (max-width: 990px) {
+        .user_options-forms {
+            min-height: 350px;
+        }
+
+        .user_options-forms .forms_buttons {
+            flex-direction: column;
+        }
+
+        .user_options-forms .user_forms-login .forms_buttons-action {
+            margin-top: 30px;
+        }
+
+        .user_options-forms .user_forms-signup,
+        .user_options-forms .user_forms-login {
+            top: 40px;
+        }
+
+        .user_options-registered,
+        .user_options-unregistered {
+            padding: 50px 45px;
+        }
+    }
+
+    .user_options-forms.user_options-forms.bounceLeft {
+        min-height: 500px !important;
+        transition: 1s;
+    }
+
+    select {
+        border: none;
+        border-bottom: 1px solid #ccc;
+        outline: none;
+        margin: 8px 0;
+        padding: 5px 0;
+        width: 65%;
+        color: gray;
+    }
+
+</style>
+<body>
+
+  <nav style="top: 0px;">
+		<!-- <a href="#">Logo</a> -->
+		<a href="/index" id="logo-nav"> <img src="../Assets/Blaze-no-bg.png" style="width: 70px; height: auto;"><strong
+				style="margin-left: 5px; font-size: 15pt; margin-top: 6px; color: #052858">BLAZE</strong></a>
+		<a href="#" style="color: #052858"> Register Your Society!</a>
+		<a href="/login" style="color: #052858"> Login</a>
+	</nav>
+<section class="user">
+		<div class="user_options-container">
+			<div class="user_options-text">
+				<div class="user_options-unregistered">
+					<h2 class="user_unregistered-title">Don't have an account?</h2>
+					<button class="user_unregistered-signup" id="signup-button">Sign up</button>
+				</div>
+
+				<div class="user_options-registered">
+					<h2 class="user_registered-title">Have an account?</h2>
+					<button class="user_registered-login" id="login-button">Login</button>
+				</div>
+			</div>
+
+			<div class="user_options-forms" id="user_options-forms">
+				<div class="user_forms-login">
+					<h2 class="forms_title">Login</h2>
+					<form class="forms_form">
+						<fieldset class="forms_fieldset">
+							<div class="forms_field">
+								<input type="email" placeholder="Email" class="forms_field-input" required autofocus />
+							</div>
+							<div class="forms_field">
+								<input type="password" placeholder="Password" class="forms_field-input" required />
+							</div>
+						</fieldset>
+						<div class="forms_buttons">
+							<input type="submit" value="Log In" class="forms_buttons-action">
+						</div>
+					</form>
+				</div>
+				<div class="user_forms-signup">
+					<h2 class="forms_title">Sign Up</h2>
+
+            <form method="POST" action="/login"> 
+              <fieldset class="forms_fieldset">
+							<div class="forms_field">
+								<input type="text" placeholder="Full Name" class="forms_field-input" required />
+							</div>
+							<div class="forms_field">
+								<input type="number" placeholder="Phone Number" class="forms_field-input" required />
+							</div>
+							<div class="forms_field">
+								<input type="email" placeholder="Email" class="forms_field-input" required />
+							</div>
+							<div class="forms_field">
+								<input type="password" placeholder="Password" class="forms_field-input" required />
+							</div>
+							<div class="forms_field">
+								<select>
+									<option>IGDTUW</option>
+									<option>NSUT</option>
+									<option>IIIT-D</option>
+									<option>DTU</option>
+									<option>Others</option>
+								</select>
+							</div>
+						</fieldset>
+						<div class="forms_buttons">
+							<input type="submit" value="Sign up" class="forms_buttons-action">
+						</div>
+
+            </form>
+
+            </div>
+			</div>
+		</div>
+	</section>
+
+	<script>
+    const signupButton = document.getElementById('signup-button'),
+    loginButton = document.getElementById('login-button'),
+    userForms = document.getElementById('user_options-forms')
+
+/**
+ * Add event listener to the "Sign Up" button
+ */
+signupButton.addEventListener('click', () => {
+    userForms.classList.remove('bounceRight')
+    userForms.classList.add('bounceLeft')
+}, false)
+
+/**
+ * Add event listener to the "Login" button
+ */
+loginButton.addEventListener('click', () => {
+    userForms.classList.remove('bounceLeft')
+    userForms.classList.add('bounceRight')
+}, false)
+  </script>
+</html>

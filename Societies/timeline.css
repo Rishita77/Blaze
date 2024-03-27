@@ -1,7 +1,7 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;700&display=swap');
 
 .time-line {
-    height: 200px;
+    height: 225px;
     /* width: 50px; */
 }
 
@@ -16,7 +16,7 @@
     height: 100%;
     display: flex;
     /* flex-wrap: wrap; */
-    height: 200px;
+    height: 225px;
     flex-direction: row;
     align-self: center;
 }
@@ -33,7 +33,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 175px;
     min-width: 175px;
-    height: 175px;
+    height: 185px;
     margin: 0px 10px 0px 10px;
     background-color: white;
 }
@@ -57,7 +57,6 @@ h4 {
     font-size: 12px;
 }
 
-
 button {
     /* margin: 20px; */
     /* padding: 10px 20px; */
@@ -67,6 +66,10 @@ button {
     border: 2px solid rgb(255, 3, 3);
     cursor: pointer;
     font-size: 16px;
+}
+
+a {
+    text-decoration: none !important;
 }
 
 button:hover {

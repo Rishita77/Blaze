@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+	<!-- Navbar -->
+	<nav style="top: 0px;">
+		<!-- <a href="#">Logo</a> -->
+		<a href="../index.html" id="logo-nav"> <img src="../../Assets/Blaze-no-bg.png"><strong
+				style="margin-left: 5px; font-size: 15pt; margin-top: 6px; color: #e8fefe">BLAZE</strong></a>
+		<a href="#" style="color: #e8fefe;"> Register Your Society!</a>
+		<a href="./Login/Login.html" style="color: #e8fefe;"> Login</a>
+	</nav>
+
+	<!-- Login Signup -->
+	<section class="user">
+		<div class="user_options-container">
+			<div class="user_options-text">
+				<div class="user_options-unregistered">
+					<h2 class="user_unregistered-title">Don't have an account?</h2>
+					<button class="user_unregistered-signup" id="signup-button">Sign up</button>
+				</div>
+
+				<div class="user_options-registered">
+					<h2 class="user_registered-title">Have an account?</h2>
+					<button class="user_registered-login" id="login-button">Login</button>
+				</div>
+			</div>
+
+			<div class="user_options-forms" id="user_options-forms">
+				<div class="user_forms-login">
+					<a href="./home.html"><h2 class="forms_title">Login</h2></a>
+					<form class="forms_form">
+						<fieldset class="forms_fieldset">
+							<div class="forms_field">
+								<input type="email" placeholder="Email" class="forms_field-input" required autofocus />
+							</div>
+							<div class="forms_field">
+								<input type="password" placeholder="Password" class="forms_field-input" required />
+							</div>
+						</fieldset>
+						<div class="forms_buttons">
+							<input type="submit" value="Log In" class="forms_buttons-action">
+						</div>
+					</form>
+				</div>
+				<div class="user_forms-signup">
+					<h2 class="forms_title">Sign Up</h2>
+					<form class="forms_form">
+						<fieldset class="forms_fieldset">
+							<div class="forms_field">
+								<input type="text" placeholder="Full Name" class="forms_field-input" required />
+							</div>
+							<div class="forms_field">
+								<input type="number" placeholder="Phone Number" class="forms_field-input" required />
+							</div>
+							<div class="forms_field">
+								<input type="email" placeholder="Email" class="forms_field-input" required />
+							</div>
+							<div class="forms_field">
+								<input type="password" placeholder="Password" class="forms_field-input" required />
+							</div>
+							<div class="forms_field">
+								<select>
+									<option>IGDTUW</option>
+									<option>NSUT</option>
+									<option>IIIT-D</option>
+									<option>DTU</option>
+									<option>Others</option>
+								</select>
+							</div>
+						</fieldset>
+						<div class="forms_buttons">
+							<input type="submit" value="Sign up" class="forms_buttons-action">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<hr style="margin-top: 10px; border-width: 1px; margin-left: 5%; margin-right: 5%; border-color: rgb(0, 0, 40);">
+    <div class="footer-body" style="width: 95vw;">
+        <footer>
+            <div class="social-icons-footer">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/igdtuwinnerve/"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/Innerveigdtuw"><i class="fab fa-twitter fa-0.5x"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com"><i class="fab fa-instagram fa-0.5x"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/innerve/mycompany/"><i
+                                class="fab fa-linkedin-in fa-0.5x"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@InnerveIGDTUW"><i class="fab fa-youtube fa-0.5x"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <p class="copyright">© Blaze 2024</p>
+        </footer>
+    </div>
+
+	<script src="../../Login/login2.js"></script>
+	<script src="./css/footer.js"></script>
+</body>
+
+</html>

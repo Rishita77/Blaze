@@ -4,12 +4,14 @@ const signupButton = document.getElementById('signup-button'),
     userForms = document.getElementById('user_options-forms')
 
 loginButton.addEventListener('click', () => {
-    userForms.classList.remove('bounceRight')
-    userForms.classList.add('bounceLeft')
+    userForms.classList.remove('bounceLeft')
+    userForms.classList.add('bounceRight')
+    
 }, false)
 
 
 signupButton.addEventListener('click', () => {
-    userForms.classList.remove('bounceLeft')
-    userForms.classList.add('bounceRight')
+    userForms.classList.remove('bounceRight')
+    userForms.classList.add('bounceLeft')
+    
 }, false)

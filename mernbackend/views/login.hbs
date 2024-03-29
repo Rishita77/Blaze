@@ -17,13 +17,12 @@
 <body>
 
 	<nav style="top: 0px;">
-		<a href="/index" id="logo-nav"> <img src="Assets/Blaze-no-bg.png"><strong
+		<a href="/" id="logo-nav"> <img src="Assets/Blaze-no-bg.png"><strong
 				style="margin-left: 5px; font-size: 15pt; margin-top: 6px; color: #e8fefe">BLAZE</strong></a>
 		<a href="#" style="color: #e8fefe;"> Register Your Society!</a>
 		<a href="/login" style="color: #e8fefe;"> Login</a>
 	</nav>
 
-	<!-- Login Signup -->
 	<section class="user">
 		<div class="user_options-container">
 			<div class="user_options-text">
@@ -42,14 +41,14 @@
 
 			<div class="user_options-forms" id="user_options-forms">
 				<div class="user_forms-login">
-					<a href="./home.html"><h2 class="forms_title">Login</h2></a>
-					<form class="forms_form">
+					<h2 class="forms_title">Login</h2>
+					<form method="POST" action="/login" class="forms_form">
 						<fieldset class="forms_fieldset">
 							<div class="forms_field">
-								<input type="email" placeholder="Email" class="forms_field-input" required autofocus />
+								<input type="email" name="email" placeholder="Email" class="forms_field-input" required autofocus />
 							</div>
 							<div class="forms_field">
-								<input type="password" placeholder="Password" class="forms_field-input" required />
+								<input type="password" name="password" placeholder="Password" class="forms_field-input" required />
 							</div>
 						</fieldset>
 						<div class="forms_buttons">

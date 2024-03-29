@@ -27,6 +27,10 @@ app.get("/register", (req,res) => {
     res.render("register");
 });
 
+app.get("/login", (req,res)=>{
+    res.render("login");
+});
+
 app.post("/register", async (req,res) => {
     try {
         const password = req.body.password;
@@ -40,11 +44,29 @@ app.post("/register", async (req,res) => {
         })
 
         const registered = await registerStudent.save();
-        res.status(201).render("index");
+        res.status(201).redirect("/login"); 
 
         
     } catch (error) {
         res.status(400).send(error);
+    }
+});
+
+
+app.post("/login", async(req,res)=>{
+    try{
+        
+        const email = req.body.email;
+        const password = req.body.password;
+          
+        const userEmail = await Register.findOne({emailAddress: email});
+        if(userEmail.password === password){
+            res.status(201).render("index");
+        }else{
+            res.send("Invalid login Details");
+        }
+    }catch(error){
+        res.status(400).send("invalid Email");
     }
 });
 

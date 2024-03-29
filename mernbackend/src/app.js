@@ -39,6 +39,12 @@ app.get("/home", (req,res)=>{
     res.render("home");
 });
 
+app.get("/societies", (req,res)=>{
+    res.render("societies");
+});
+
+
+
 app.post("/register", async (req,res) => {
     try {
         const password = req.body.password;

@@ -53,22 +53,22 @@ app.post("/register", async (req,res) => {
 });
 
 
-app.post("/login", async(req,res)=>{
-    try{
-        
+app.post("/login", async (req, res) => {
+    try {
         const email = req.body.email;
         const password = req.body.password;
-          
-        const userEmail = await Register.findOne({emailAddress: email});
-        if(userEmail.password === password){
-            res.status(201).render("index");
-        }else{
-            res.send("Invalid login Details");
+
+        const user = await Register.findOne({ email: email });
+        if (user && user.password === password) {
+            res.status(200).render("home");
+        } else {
+            res.status(401).send("Invalid login details");
         }
-    }catch(error){
-        res.status(400).send("invalid Email");
+    } catch (error) {
+        res.status(500).send("Internal Server Error");
     }
 });
+
 
 app.listen(port, () => {
     console.log(`Server is running at port 3000`)

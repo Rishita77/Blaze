@@ -47,13 +47,20 @@
     border: 2px white solid;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
     transition: 0.5s;
+    /* transition: filter 0.2s ease; */
 }
 
 .main .member:hover {
     margin-top: -2rem;
     box-shadow: 0px 10px 10px rgba(255, 255, 255, 0.2);
     border-radius: calc(50% - 8px);
+    filter: brightness(0.35);
 }
+
+.member:hover svg {
+    display: block;
+}
+
 
 .tooltip-flair {
     position: absolute;
@@ -87,4 +94,13 @@
 
 .position {
     margin-bottom: 25px;
+}
+
+.member > svg {
+    width: 50px;
+    height: 50px !important;
+    margin-top: 22px;
+    margin-left: 22px;
+    display: none;
+    transition: 1s ease-in;
 }

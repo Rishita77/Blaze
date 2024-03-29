@@ -31,6 +31,14 @@ app.get("/login", (req,res)=>{
     res.render("login");
 });
 
+app.get("/colleges", (req,res)=>{
+    res.render("colleges");
+});
+
+app.get("/home", (req,res)=>{
+    res.render("home");
+});
+
 app.post("/register", async (req,res) => {
     try {
         const password = req.body.password;

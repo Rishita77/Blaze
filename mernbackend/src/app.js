@@ -5,6 +5,7 @@ const hbs = require("hbs")
 require("./db/conn");
 
 const Register = require("./models/registers");
+const Suggestion = require("./models/suggestion");
 
 const port = process.env.port || 3000;
 
@@ -44,6 +45,11 @@ app.get("/societies", (req,res)=>{
 });
 
 
+app.get("/suggestion", (req,res)=>{
+    res.render("suggestion");
+});
+
+
 
 app.post("/register", async (req,res) => {
     try {
@@ -79,6 +85,25 @@ app.post("/login", async (req, res) => {
         }
     } catch (error) {
         res.status(500).send("Internal Server Error");
+    }
+});
+
+app.post("/suggestion", async (req, res) => {
+    try {
+        const registerSugg = new Suggestion({
+            name: req.body.name,
+            email: req.body.email,
+            college: req.body.college,
+            phnumber: req.body.telephone, 
+            subject: req.body.subject,
+            message: req.body.message,
+            speaker: req.body.speaker
+        });
+
+        const suggested = await registerSugg.save();
+        res.status(201).render("home", { message: "Thanks for the suggestion!" }); 
+    } catch (error) {
+        res.status(400).send(error);
     }
 });
 

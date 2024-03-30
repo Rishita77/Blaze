@@ -30,6 +30,7 @@
 		<a href="/home" id="logo-nav" style="color: #e8fefe;"> <img src="Assets/Blaze-no-bg.png" ><strong
 				style="margin-left: 5px; font-size: 15pt; margin-top: 6px;" style="color: #e8fefe;">BLAZE</strong></a>
 		<a href="/colleges" style="color: #e8fefe;"> Colleges</a>
+		<a href="/suggestion">Request an event</a>
 		<a href="#" style="color: #e8fefe;"> Register Your Society!</a>
 		<a href="/" style="color: #e8fefe;"> Log Out</a>
 	</nav>
@@ -91,6 +92,11 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="jsfile/hero.js"></script>
 	<script src="jsfile/footer.js"></script>
+	<script>
+        {{#if message}}
+        alert("{{message}}");
+        {{/if}}
+    </script>
 
 </body>
 

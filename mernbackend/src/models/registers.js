@@ -21,6 +21,6 @@ const studentSchema = new mongoose.Schema({
     }
 })
 
-const Register = new mongoose.model("students", studentSchema)
+const Register = new mongoose.model("Student", studentSchema)
 
 module.exports = Register;

@@ -47,18 +47,17 @@ app.get("/societies", (req,res)=>{
 
 app.post("/register", async (req,res) => {
     try {
-        const password = req.body.password;
 
         const registerStudent = new Register({
-            name : req.body.fullname,
+            name : req.body.name,
             phone : req.body.phone,
             email : req.body.email,
             password : req.body.password
 
-        })
+        });
 
         const registered = await registerStudent.save();
-        res.status(201).redirect("/login"); 
+        res.status(201).render("home"); 
 
         
     } catch (error) {

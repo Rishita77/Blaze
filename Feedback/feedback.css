@@ -78,13 +78,14 @@ a:hover {
     animation: fish 3s forwards ease-in-out;
 }
 
-/* .fish path {
+.fish path {
     fill: #fff;
-} */
+    /* width: 1000px; */
+}
 
-/* .fish path:hover {
+.fish path:hover {
     fill: #ff6100;
-} */
+}
 
 .fish-shadow-con {
     opacity: 0.2;

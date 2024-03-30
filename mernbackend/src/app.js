@@ -54,6 +54,10 @@ app.get("/regsoc", (req,res)=>{
     res.render("regsoc");
 });
 
+app.get("/faq", (req,res)=>{
+    res.render("faq");
+});
+
 
 
 app.post("/register", async (req,res) => {

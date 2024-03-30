@@ -58,6 +58,10 @@ app.get("/faq", (req,res)=>{
     res.render("faq");
 });
 
+app.get("/about", (req,res)=>{
+    res.render("about");
+});
+
 
 
 app.post("/register", async (req,res) => {

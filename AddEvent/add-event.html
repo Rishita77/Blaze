@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event | Blaze</title>
+    <link rel="stylesheet" href="../Suggestion/suggestion.css">
+    <link rel="stylesheet" href="../mernbackend/public/css/header.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav style="top: 0px;">
+        <!-- <a href="#">Logo</a> -->
+        <a href="./home.html" id="logo-nav" style="color: #e8fefe;"> <img src="../Assets/Blaze-no-bg.png"><strong
+                style="margin-left: 5px; font-size: 15pt; margin-top: 6px;" style="color: #e8fefe;">BLAZE</strong></a>
+        <a href="./suggest.html" style="color: #e8fefe;"> Request an event </a>
+        <a href="#" style="color: #e8fefe;"> Register Your Society!</a>
+        <a href="../Login/Login.html" style="color: #e8fefe;"> Login</a>
+    </nav>
+
+    <!-- Conduct a session form -->
+    <div id="container">
+        <h1>&bull; ADD NEW EVENT TO THE TIMELINE &bull;</h1>
+        <div class="underline">
+        </div>
+        <div class="icon_wrapper">
+            <svg class="icon " xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-calendar2-week" viewBox="0 0 16 16">
+                <path
+                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z" />
+                <path
+                    d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5zM11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z" />
+            </svg>
+        </div>
+        <form action="#" method="post" id="suggestion-form">
+            <div class="name">
+                <label for="name"></label>
+                <input type="text" placeholder="Name (Society)" name="name" id="name_input" required>
+            </div>
+            <div class="email">
+                <label for="email"></label>
+                <input type="email" placeholder="Email (Society)" name="email" id="email_input" required>
+            </div>
+            <div class="college">
+                <label for="name"></label>
+                <input type="text" placeholder="College" name="college" id="college_input" required>
+            </div>
+            <div class="telephone">
+                <label for="name"></label>
+                <input type="text" placeholder="Mobile (president)" name="telephone" id="telephone_input" required>
+            </div>
+            <div class="event-name">
+                <label for="name"></label>
+                <input type="text" placeholder="Event Name" name="event-name" id="event_input" required>
+            </div> 
+            <div class="venue">
+                <label for="name"></label>
+                <input type="text" placeholder="Event Name" name="venue" id="venue_input" required>
+            </div> 
+            <div class="timings">
+                <label for="name"></label>
+                <input type="text" placeholder="Timings" name="timings" id="timings_input" required>
+            </div>            
+            <div class="poster" style="margin-top: 78px;">
+            <label for="image"> Upload event poster : </label>
+            <input type="file" id="image" name="image" accept="image/*" required />
+            </div>
+            <button>Submit</button>
+            <div class="submit">
+                <input type="submit" value="Add Event" id="form_button" />
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>

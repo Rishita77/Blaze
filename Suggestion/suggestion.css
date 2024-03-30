@@ -76,7 +76,7 @@ h1 {
     width: 50px;
 }
 
-.email, .telephone {
+.email, .telephone, .timings {
     float: right;
     width: 45%;
 }
@@ -119,7 +119,7 @@ textarea:focus {
     float: none;
 }
 
-.name, .college {
+.name, .college, .venue {
     float: left;
     width: 45%;
 }

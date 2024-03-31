@@ -39,7 +39,11 @@ section>* {
 }
 
 .banner1 {
+<<<<<<< HEAD
+    background-image: url('/Assets/landingplane.jpg');
+=======
     background-image: url(../Assets/landingplane.jpg);
+>>>>>>> f33fbbac9ed7a55207d43801c5c84a8b4cd21bc3
 }
 
 .banner2 {

@@ -8,6 +8,7 @@ const Register = require("./models/registers");
 const Suggestion = require("./models/suggestion");
 const RegisterSoc = require("./models/regsoc");
 const Feedback = require("./models/feedback");
+const { equal } = require("assert");
 
 const port = process.env.port || 3000;
 
@@ -65,6 +66,14 @@ app.get("/about", (req,res)=>{
 
 app.get("/feedback", (req,res)=>{
     res.render("feedback");
+});
+
+app.get("/collab", (req,res)=>{
+    res.render("collab");
+});
+
+app.get("/event", (req,res)=>{
+    res.render("event");
 });
 
 
@@ -159,6 +168,30 @@ app.post("/feedback", async (req, res) => {
 
         const feedback = await registerFeed.save();
         res.status(201).render("feedback", { message: "Thanks for the feedback!" }); 
+    } catch (error) {
+        res.status(400).send(error);
+    }
+});
+
+app.post("/collab", async (req, res) => {
+    try {
+        const registerCollab = new Collab({
+            name: req.body.name,
+            emailp: req.body.emailp,
+            email: req.body.email,
+            college: req.body.college,
+            phone: req.body.phone,
+            event: req.body.event,
+            pcollege: req.body.pcollege,
+            society: req.body.society,
+            details: req.body.details,
+            details: req.body.details,
+            poster: req.body.image
+
+        });
+
+        const collab = await registerCollab.save();
+        res.status(201).render("home", { message: "Thanks! We will update you soon." }); 
     } catch (error) {
         res.status(400).send(error);
     }

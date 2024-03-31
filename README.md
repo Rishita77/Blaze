@@ -46,4 +46,4 @@ If you don't have MongoDB installed, you can access the pages by typing their UR
 
 Check out the video below for a demo of the website:
 
-[![Website Demo](https://vimeo.com/929327867)](https://vimeo.com/929327867)
+[Website Demo](https://vimeo.com/929327867)

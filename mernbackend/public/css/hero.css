@@ -13,7 +13,7 @@ body {
 
 section {
     position: relative;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,9 +32,11 @@ section {
 }
 
 h1 {
-    color: #023047;
+    color: white !important;
     text-shadow: 1px 1px 3px black;
     z-index: 1;
     font-size: 3em;
     font-weight: 400;
+    padding-top: 425px;
+    padding-left: 25.5rem;;
 }

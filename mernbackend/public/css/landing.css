@@ -39,11 +39,15 @@ section>* {
 }
 
 .banner1 {
+<<<<<<< HEAD
     background-image: url('/Assets/landingplane.jpg');
+=======
+    background-image: url(../Assets/landingplane.jpg);
+>>>>>>> f33fbbac9ed7a55207d43801c5c84a8b4cd21bc3
 }
 
 .banner2 {
-    background-image: url(https://images.unsplash.com/photo-1543154226-4493b6edc693?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80);
+    background-image: url(https://kidspot.co.nz/wp-content/uploads/2016/06/paperplanemaking.jpeg);
 }
 
 /* Fix for iOS Safari */
@@ -138,7 +142,7 @@ main {
     width: 125px;
 }
 
-#sign-up-btn>p{
+#sign-up-btn>p {
     margin: 0;
     margin-top: -2px;
 }

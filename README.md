@@ -7,7 +7,7 @@ We are having issue deploying as we have handlebars(.hbs) instead of .html that 
 Clone the Blaze GitHub repository to your local machine.
 
 ```bash
-git clone <repository_url>
+git clone https://github.com/Rishita77/Blaze.git
 ```
 
 ## Step 2: Navigate to the Mernbackend Directory

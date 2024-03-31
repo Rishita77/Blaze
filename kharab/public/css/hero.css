@@ -32,9 +32,11 @@ section {
 }
 
 h1 {
-    color: white;
+    color: white !important;
     text-shadow: 1px 1px 3px black;
     z-index: 1;
     font-size: 3em;
     font-weight: 400;
+    padding-top: 425px;
+    padding-left: 25.5rem;;
 }

@@ -33,10 +33,10 @@ const collabSchema = new mongoose.Schema({
     },
     details: {
         type: String
-    },
-    poster: {
-        type: Image
     }
+    // poster: {
+    //     type: Image
+    // }
 });
 
 const Collab = mongoose.model("Collab", collabSchema);

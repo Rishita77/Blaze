@@ -8,6 +8,7 @@ const Register = require("./models/registers");
 const Suggestion = require("./models/suggestion");
 const RegisterSoc = require("./models/regsoc");
 const Feedback = require("./models/feedback");
+const Collab = require("./models/collab");
 const { equal } = require("assert");
 
 const port = process.env.port || 3000;

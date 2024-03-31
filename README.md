@@ -41,3 +41,9 @@ You can replace the names of the files mentioned with their corresponding URLs t
 If you don't have MongoDB installed, you can access the pages by typing their URLs directly into the browser address bar.
 
 .hbs files are present under mernbackend > views
+
+## Demo Video
+
+Check out the video below for a demo of the website:
+
+[![Website Demo](https://vimeo.com/929327867)](https://vimeo.com/929327867)

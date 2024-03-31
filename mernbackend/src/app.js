@@ -7,6 +7,7 @@ require("./db/conn");
 const Register = require("./models/registers");
 const Suggestion = require("./models/suggestion");
 const RegisterSoc = require("./models/regsoc");
+const Feedback = require("./models/feedback");
 
 const port = process.env.port || 3000;
 
@@ -60,6 +61,10 @@ app.get("/faq", (req,res)=>{
 
 app.get("/about", (req,res)=>{
     res.render("about");
+});
+
+app.get("/feedback", (req,res)=>{
+    res.render("feedback");
 });
 
 
@@ -134,6 +139,26 @@ app.post("/regsoc", async (req, res) => {
 
         const soc = await registerSoc.save();
         res.status(201).render("home", { message: "Thanks we will contact you soon!" }); 
+    } catch (error) {
+        res.status(400).send(error);
+    }
+});
+
+app.post("/feedback", async (req, res) => {
+    try {
+        const registerFeed = new Feedback({
+            name: req.body.name,
+            email: req.body.email,
+            college: req.body.college,
+            frequency: req.body.freq,
+            motivation: req.body.moti,
+            favfeature: req.body.feature,
+            improve: req.body.improve,
+            idea: req.body.idea
+        });
+
+        const feedback = await registerFeed.save();
+        res.status(201).render("feedback", { message: "Thanks for the feedback!" }); 
     } catch (error) {
         res.status(400).send(error);
     }

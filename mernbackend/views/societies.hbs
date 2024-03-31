@@ -44,11 +44,11 @@
 
 	<div class="cards-list" style="margin-top: 60px;">
 
-		<div class="card 1">
+		<div class="card 1" id="clickable-1">
 			<div class="card_image"> <img src="Assets/Societies/gdsc-igdtuw.jpeg" /> </div>
 		</div>
 
-		<div class="card 2">
+		<div class="card 2" id="clickable-2">
 			<div class="card_image">
 				<img src="Assets/Societies/rotary-ig.jpeg" />
 			</div>
@@ -322,6 +322,14 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script src="jsfile/igdtuw.js"></script>
 		<script src="jsfile/footer.js"></script>
+		<script>
+        document.getElementById('clickable-1').onclick = function() {
+            window.location.href = '/gdsc-ig';
+        };
+		document.getElementById('clickable-2').onclick = function() {
+            window.location.href = '/rotar-ig';
+        };
+    </script>
 
 </body>
 

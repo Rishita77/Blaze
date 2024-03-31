@@ -34,7 +34,10 @@ Once the application is running locally, you can access it in your browser using
 - **About Page:** [localhost:3000/about](http://localhost:3000/about)
 - **Collab Page:** [localhost:3000/collab](http://localhost:3000/collab)
 - **Colleges Page:** [localhost:3000/colleges](http://localhost:3000/colleges)
+- and so on.. (Watch out for the index.hbs url)
 
 You can replace the names of the files mentioned with their corresponding URLs to access different pages of the application.
 
 If you don't have MongoDB installed, you can access the pages by typing their URLs directly into the browser address bar.
+
+.hbs files are present under mernbackend > views

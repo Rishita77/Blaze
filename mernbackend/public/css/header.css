@@ -15,7 +15,7 @@ nav {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
-	background-color: rgba(13, 0, 94, 0.618);
+	background-color: rgba(2, 48, 97, 0.618);
 	padding: 0px;
 	/* justify-content: center; */
 	z-index: 1;

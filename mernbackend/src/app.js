@@ -48,6 +48,13 @@ app.get("/societies", (req,res)=>{
     res.render("societies");
 });
 
+app.get("/gdsc-ig", (req,res)=>{
+    res.render("gdsc-ig");
+});
+
+app.get("/rotar-ig", (req,res)=>{
+    res.render("rotar-ig");
+});
 
 app.get("/suggestion", (req,res)=>{
     res.render("suggestion");
